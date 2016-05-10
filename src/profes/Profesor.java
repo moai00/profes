@@ -17,9 +17,32 @@ public class Profesor implements Serializable {
     private String nombre;
     private String apellidos;
     private String especialidad;
-    private boolean master;    
+    private boolean master;
     private boolean autonomo;
     private int edad;
+
+    public Profesor() {
+
+        nif = "";
+        nombre = "";
+        apellidos = "";
+        especialidad = "";
+        edad = 18;
+
+    }
+
+    public Profesor(String nif, String nombre, String apellidos, String especialidad, boolean master, boolean autonomo, int edad) {
+        this.nif = nif;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.especialidad = especialidad;
+        this.master = master;
+        this.autonomo = autonomo;
+        this.edad = edad;
+    }
+
+    
+    
 
     public int getEdad() {
         return edad;
@@ -29,7 +52,6 @@ public class Profesor implements Serializable {
         this.edad = edad;
     }
 
-
     public boolean isAutonomo() {
         return autonomo;
     }
@@ -37,7 +59,6 @@ public class Profesor implements Serializable {
     public void setAutonomo(boolean autonomo) {
         this.autonomo = autonomo;
     }
-
 
     public boolean isMaster() {
         return master;
