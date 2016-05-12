@@ -46,6 +46,50 @@
      </void>
     </object>
    </void>
+   <void method="add">
+    <object class="profes.Profesor">
+     <void property="apellidos">
+      <string>pepepe</string>
+     </void>
+     <void property="autonomo">
+      <boolean>true</boolean>
+     </void>
+     <void property="especialidad">
+      <string>Informática</string>
+     </void>
+     <void property="master">
+      <boolean>true</boolean>
+     </void>
+     <void property="nif">
+      <string>77611303P</string>
+     </void>
+     <void property="nombre">
+      <string>pepe</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="profes.Profesor">
+     <void property="apellidos">
+      <string>Gustrox Sanchez</string>
+     </void>
+     <void property="edad">
+      <int>22</int>
+     </void>
+     <void property="especialidad">
+      <string>Idiomas</string>
+     </void>
+     <void property="master">
+      <boolean>true</boolean>
+     </void>
+     <void property="nif">
+      <string>12345678E</string>
+     </void>
+     <void property="nombre">
+      <string>Warren</string>
+     </void>
+    </object>
+   </void>
   </void>
  </object>
 </java>

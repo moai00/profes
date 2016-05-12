@@ -12,8 +12,8 @@ import javax.swing.JOptionPane;
  * @author usu21
  */
 public class AltaProfesor extends javax.swing.JDialog {
-    
-        private Profesor p;
+
+    private Profesor p;
 
     public Profesor getP() {
         return p;
@@ -23,13 +23,12 @@ public class AltaProfesor extends javax.swing.JDialog {
         this.p = p;
     }
 
-
     /**
      * Creates new form AltaProfesor
      */
     public AltaProfesor(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
-        
+
         p = new Profesor();
         initComponents();
     }
@@ -222,19 +221,18 @@ public class AltaProfesor extends javax.swing.JDialog {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // Primero controlamos que los datos sean correctos
-        if(p.getNif().isEmpty() || p.getNombre().isEmpty() || p.getApellidos().isEmpty()){
+        if (p.getNif().isEmpty() || p.getNombre().isEmpty() || p.getApellidos().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Hay campos en blanco", "Campos vacíos", JOptionPane.ERROR_MESSAGE);
-        }else if (p.getEspecialidad().isEmpty() || jComboBox1.getSelectedIndex() == 0){
+        } else if (p.getEspecialidad().isEmpty() || jComboBox1.getSelectedIndex() == 0) {
             JOptionPane.showMessageDialog(this, "Debes escoger una especialidad", "Especialidad vacía", JOptionPane.ERROR_MESSAGE);
-            
-            
-        }else if (!jRadioButton1.isSelected() && !jRadioButton2.isSelected()){
+
+        } else if (!jRadioButton1.isSelected() && !jRadioButton2.isSelected()) {
             JOptionPane.showMessageDialog(this, "Debes escoger una relacón laboral", "Relación laboral vacía", JOptionPane.ERROR_MESSAGE);
-        
-       
-        
-        }else{
-            
+
+        } else if (Profes.misProfesores.existe(p)) {
+            JOptionPane.showMessageDialog(this, "Ya existe un profesor con ese NIF", "NIF Duplicado", JOptionPane.ERROR_MESSAGE);
+        } else {
+
 //            if(jRadioButton1.isSelected()){
 //                p.setAutonomo(true);
 //                
@@ -243,21 +241,21 @@ public class AltaProfesor extends javax.swing.JDialog {
 //            }
 //            
 //            Profes.misProfesores.altaProfesor(p);
-            
             //les ultimes 5 linies equivalen a:
-            
             p.setAutonomo(jRadioButton1.isSelected());
-            
+
             Profes.misProfesores.altaProfesor(p);
             Profes.miFichero.grabar(Profes.misProfesores);
             JOptionPane.showMessageDialog(this, "Profesor dado de alta");
+            
+            
+            dispose();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;

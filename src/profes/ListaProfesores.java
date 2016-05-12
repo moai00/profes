@@ -21,6 +21,24 @@ public class ListaProfesores implements Serializable {
     public void altaProfesor(Profesor p){
         lista.add(p);
     }
+    
+    public boolean existe (Profesor p){
+        return lista.contains(p);
+        
+    }
+    
+    //metodo que devuelve la lista de especialidades 
+    public ArrayList<String> especialidades (){
+        ArrayList<String> esp = new ArrayList<>();
+        
+        for (Profesor p : lista){
+            if (!esp.contains(p.getEspecialidad())){
+                esp.add(p.getEspecialidad());
+            }
+        }
+        
+        return esp;
+    }
         
 
     public ArrayList<Profesor> getLista() {
