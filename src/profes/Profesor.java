@@ -6,6 +6,7 @@
 package profes;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
@@ -41,8 +42,25 @@ public class Profesor implements Serializable {
         this.edad = edad;
     }
 
-    
-    
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 97 * hash + Objects.hashCode(this.nif);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Profesor other = (Profesor) obj;
+        return nif.equalsIgnoreCase(other.getNif());
+
+    }
 
     public int getEdad() {
         return edad;
