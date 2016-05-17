@@ -11,12 +11,19 @@ package profes;
  */
 public class ModificarEdad extends javax.swing.JDialog {
 
+    Profesor profesorPasado;
+
     /**
      * Creates new form ModificarEdad
      */
     public ModificarEdad(java.awt.Frame parent, boolean modal, Profesor elProfesor) {
         super(parent, modal);
+        profesorPasado = elProfesor;
         initComponents();
+
+        // inicializamos el spinner con la edad actual del profesor
+        jSpinner1.setValue(profesorPasado.getEdad());
+
     }
 
     /**
@@ -75,7 +82,6 @@ public class ModificarEdad extends javax.swing.JDialog {
     /**
      * @param args the command line arguments
      */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
