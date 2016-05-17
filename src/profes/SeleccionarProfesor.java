@@ -121,32 +121,35 @@ public class SeleccionarProfesor extends javax.swing.JDialog {
                 int edad = Integer.parseInt(respuesta);
                 if (edad < 18 || edad > 120) {
                     JOptionPane.showMessageDialog(this, "Edad incorrecta", "Edad incorrecta", JOptionPane.ERROR_MESSAGE);
-                
-            }else{
+
+                } else {
                     profesorEscogido.setEdad(edad);
                     Profes.miFichero.grabar(Profes.misProfesores);
                     JOptionPane.showMessageDialog(this, "Edad modificada");
                     dispose();
-                    
-                    
-                    }
-        }catch (NumberFormatException ex) {
+
+                }
+            } catch (NumberFormatException ex) {
                 JOptionPane.showMessageDialog(this, "Debes indicar un nº", "Edad incorrecta", JOptionPane.ERROR_MESSAGE);
             }
-    
 
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        ModificarEdad me = new ModificarEdad(null, true, profesorEscogido);
-        me.setLocationRelativeTo(null);
-        me.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
 
-/**
- * @param args the command line arguments
- */
+        if (profesorEscogido.equals(new Profesor())) {
+            JOptionPane.showMessageDialog(this, "Debes seleccionar un profesor", "Profesor sin seleccionar", JOptionPane.ERROR_MESSAGE);
+        } else {
+
+            ModificarEdad me = new ModificarEdad(null, true, profesorEscogido);
+            me.setLocationRelativeTo(null);
+            me.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+    }
+    /**
+     * @param args the command line arguments
+     */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

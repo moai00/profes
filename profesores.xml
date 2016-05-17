@@ -98,6 +98,9 @@
      <void property="autonomo">
       <boolean>true</boolean>
      </void>
+     <void property="edad">
+      <int>31</int>
+     </void>
      <void property="especialidad">
       <string>Administración</string>
      </void>
@@ -118,7 +121,7 @@
       <string>pepep</string>
      </void>
      <void property="edad">
-      <int>21</int>
+      <int>85</int>
      </void>
      <void property="especialidad">
       <string>Informática</string>
