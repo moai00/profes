@@ -43,6 +43,14 @@ public class Profesor implements Serializable {
     }
 
     @Override
+    public String toString() {
+        return  nif + " - " + nombre + ", " + apellidos;
+    }
+    
+    
+    
+
+    @Override
     public int hashCode() {
         int hash = 3;
         hash = 97 * hash + Objects.hashCode(this.nif);
