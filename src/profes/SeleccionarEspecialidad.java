@@ -109,7 +109,7 @@ public class SeleccionarEspecialidad extends javax.swing.JDialog {
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-.       String especialidad = "";
+      String especialidad = "";
         especialidad = (String) jComboBox1.getSelectedItem();
         
         if ( especialidad.isEmpty() || jComboBox1.getSelectedIndex() == 0){

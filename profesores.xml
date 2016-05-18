@@ -3,78 +3,12 @@
  <object class="profes.ListaProfesores" id="ListaProfesores0">
   <void property="lista">
    <void method="add">
-    <object class="profes.Profesor" id="Profesor0">
+    <object class="profes.Profesor">
      <void property="apellidos">
-      <string>Port Ramon</string>
+      <string>perico</string>
      </void>
      <void property="edad">
-      <int>35</int>
-     </void>
-     <void property="especialidad">
-      <string>Educación Física</string>
-     </void>
-     <void property="master">
-      <boolean>true</boolean>
-     </void>
-     <void property="nif">
-      <string>77611300P</string>
-     </void>
-     <void property="nombre">
-      <string>Miquel</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object idref="Profesor0"/>
-   </void>
-   <void method="add">
-    <object class="profes.Profesor">
-     <void property="apellidos">
-      <string>werwer</string>
-     </void>
-     <void property="especialidad">
-      <string>Finanzas</string>
-     </void>
-     <void property="master">
-      <boolean>true</boolean>
-     </void>
-     <void property="nif">
-      <string>werer</string>
-     </void>
-     <void property="nombre">
-      <string>erwer</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="profes.Profesor">
-     <void property="apellidos">
-      <string>pepepe</string>
-     </void>
-     <void property="autonomo">
-      <boolean>true</boolean>
-     </void>
-     <void property="especialidad">
-      <string>Informática</string>
-     </void>
-     <void property="master">
-      <boolean>true</boolean>
-     </void>
-     <void property="nif">
-      <string>77611303P</string>
-     </void>
-     <void property="nombre">
-      <string>pepe</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="profes.Profesor">
-     <void property="apellidos">
-      <string>Gustrox Sanchez</string>
-     </void>
-     <void property="edad">
-      <int>22</int>
+      <int>60</int>
      </void>
      <void property="especialidad">
       <string>Idiomas</string>
@@ -83,57 +17,32 @@
       <boolean>true</boolean>
      </void>
      <void property="nif">
-      <string>12345678E</string>
+      <string>89898989A</string>
      </void>
      <void property="nombre">
-      <string>Warren</string>
+      <string>pepe</string>
      </void>
     </object>
    </void>
    <void method="add">
     <object class="profes.Profesor">
      <void property="apellidos">
-      <string>pepe</string>
+      <string>perez garcia</string>
      </void>
      <void property="autonomo">
       <boolean>true</boolean>
      </void>
      <void property="edad">
-      <int>31</int>
-     </void>
-     <void property="especialidad">
-      <string>Administración</string>
-     </void>
-     <void property="master">
-      <boolean>true</boolean>
-     </void>
-     <void property="nif">
-      <string>343434</string>
-     </void>
-     <void property="nombre">
-      <string>pepe</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="profes.Profesor">
-     <void property="apellidos">
-      <string>pepep</string>
-     </void>
-     <void property="edad">
-      <int>85</int>
+      <int>39</int>
      </void>
      <void property="especialidad">
       <string>Informática</string>
      </void>
-     <void property="master">
-      <boolean>true</boolean>
-     </void>
      <void property="nif">
-      <string>8888</string>
+      <string>34562345</string>
      </void>
      <void property="nombre">
-      <string>miquel</string>
+      <string>andres</string>
      </void>
     </object>
    </void>
